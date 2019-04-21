@@ -6,11 +6,11 @@
 /*   By: del-alj <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/28 04:26:06 by del-alj           #+#    #+#             */
-/*   Updated: 2019/04/14 23:23:18 by del-alj          ###   ########.fr       */
+/*   Updated: 2019/04/19 09:33:01 by del-alj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int			i;
 	long int	sign;
@@ -36,5 +36,5 @@ int		ft_atoi(const char *str)
 		nb = (nb * 10) + cst_str[i] - '0';
 		i++;
 	}
-	return (sign * nb);
+	return ((int)(sign * nb));
 }

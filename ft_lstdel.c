@@ -6,12 +6,11 @@
 /*   By: del-alj <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 15:10:48 by del-alj           #+#    #+#             */
-/*   Updated: 2019/04/15 19:22:23 by del-alj          ###   ########.fr       */
+/*   Updated: 2019/04/19 13:11:11 by del-alj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
 {
@@ -21,8 +20,8 @@ void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
 	{
 		next = (*alst)->next;
 		(*del)((*alst)->content, (*alst)->content_size);
-		free((void*)*alst);
-		*alst = 0;
+		free((void *)*alst);
+		*alst = NULL;
 		*alst = next;
 	}
 }

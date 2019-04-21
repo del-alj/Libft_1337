@@ -6,7 +6,7 @@
 /*   By: del-alj <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 01:42:20 by del-alj           #+#    #+#             */
-/*   Updated: 2019/04/15 10:15:04 by del-alj          ###   ########.fr       */
+/*   Updated: 2019/04/19 11:21:08 by del-alj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
-void				*ft_memchr(void *s, int c, size_t n);
+void				*ft_memchr(const void *s, int c, size_t n);
 void				ft_memdel(void **ap);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *s, int c, size_t n);
@@ -88,5 +88,6 @@ char				*ft_strndup(const char *s1, size_t n);
 void				ft_swapchar(char *a, char *b);
 void				ft_print(void *ptr, int idx);
 size_t				ft_lenlist(t_list *list);
+void				ft_lst_del_node(void *content, size_t content_size);
 
 #endif

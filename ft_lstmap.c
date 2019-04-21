@@ -6,7 +6,7 @@
 /*   By: del-alj <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 21:33:42 by del-alj           #+#    #+#             */
-/*   Updated: 2019/04/14 22:49:07 by del-alj          ###   ########.fr       */
+/*   Updated: 2019/04/19 13:24:39 by del-alj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,11 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	head_new = new_ls;
 	while (lxt->next)
 	{
-		new_ls->next = f(lxt->next);
+		if ((new_ls->next = f(lxt->next)) == NULL)
+		{
+			ft_lstdel(&head_new, &ft_lst_del_node);
+			return (NULL);
+		}
 		new_ls = new_ls->next;
 		lxt = lxt->next;
 	}

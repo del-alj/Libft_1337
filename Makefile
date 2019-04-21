@@ -6,7 +6,7 @@
 #    By: del-alj <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/31 16:27:33 by del-alj           #+#    #+#              #
-#    Updated: 2019/04/14 23:24:34 by del-alj          ###   ########.fr        #
+#    Updated: 2019/04/19 11:03:31 by del-alj          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,7 @@ SRC = ft_atoi.c\
 	  ft_swapchar.c\
 	  ft_print.c\
 	  ft_lenlist.c\
+	  ft_lst_del_node.c\
 
 NAME = libft.a
 
@@ -141,6 +142,7 @@ OBJ = ft_atoi.o\
 	  ft_swapchar.o\
 	  ft_print.o\
 	  ft_lenlist.o\
+	  ft_lst_del_node.o\
 
 all : $(NAME)
 
